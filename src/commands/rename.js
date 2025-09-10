@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -37,7 +38,7 @@ module.exports = {
       await channel.setName(newName, `Renommage par ${interaction.user.tag}`);
       
       const embed = new EmbedBuilder()
-        .setColor(0x5865f2)
+        .setColor(colors.primary)
         .setTitle("📝 Salon renommé !")
         .setDescription(`Le salon a été renommé avec succès !`)
         .addFields(

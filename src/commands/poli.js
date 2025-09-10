@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -31,17 +32,17 @@ module.exports = {
     
     const result = candidates[Math.floor(Math.random() * candidates.length)];
     
-    let color = 0x5865f2;
+    let color = colors.primary;
     let emoji = "🗳️";
     
     // Couleurs spécifiques pour certains candidats
-    if (result === "Macron") color = 0x0000ff;
-    else if (result === "Mélenchon") color = 0xff0000;
-    else if (result === "Le Pen") color = 0x000080;
-    else if (result === "Zemmour") color = 0x800080;
-    else if (result === "Biden") color = 0x0000ff;
-    else if (result === "Trump") color = 0xff0000;
-    else if (result === "Poutine") color = 0xff0000;
+    if (result === "Macron") color = colors.info;
+    else if (result === "Mélenchon") color = colors.error;
+    else if (result === "Le Pen") color = colors.warning;
+    else if (result === "Zemmour") color = colors.accent;
+    else if (result === "Biden") color = colors.info;
+    else if (result === "Trump") color = colors.error;
+    else if (result === "Poutine") color = colors.error;
 
     const embed = new EmbedBuilder()
       .setColor(color)

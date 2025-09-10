@@ -1,5 +1,6 @@
 
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -23,23 +24,23 @@ module.exports = {
     const progressBar = `${scam.repeat(hearts)}${block.repeat(10 - hearts)}`;
     
     let status = "";
-    let color = 0xff0000;
+    let color = colors.error;
     
     if (percentage >= 80) {
       status = "🚨 Scammeur professionnel !";
-      color = 0xff0000;
+      color = colors.error;
     } else if (percentage >= 60) {
       status = "🚨 Très suspect !";
-      color = 0xff4500;
+      color = colors.error;
     } else if (percentage >= 40) {
       status = "🚨 Assez suspect !";
-      color = 0xffa500;
+      color = colors.warning;
     } else if (percentage >= 20) {
       status = "🚨 Peu suspect !";
-      color = 0xffff00;
+      color = colors.warning;
     } else {
       status = "✅ Honnête !";
-      color = 0x00ff00;
+      color = colors.success;
     }
 
     const embed = new EmbedBuilder()

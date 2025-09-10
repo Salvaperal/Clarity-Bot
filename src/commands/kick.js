@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -62,7 +63,7 @@ module.exports = {
       await member.kick(`${reason} (Kick par ${interaction.user.tag})`);
       
       const embed = new EmbedBuilder()
-        .setColor(0xffa500)
+        .setColor(colors.warning)
         .setTitle("👢 Expulsion réussie !")
         .setDescription(`**${user.username}** a été expulsé avec succès !`)
         .addFields(

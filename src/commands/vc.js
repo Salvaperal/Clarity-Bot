@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -48,7 +49,7 @@ module.exports = {
       const voicePercentage = totalMembers > 0 ? Math.round((voiceMembers / totalMembers) * 100) : 0;
 
       const embed = new EmbedBuilder()
-        .setColor(0x5865f2)
+        .setColor(colors.primary)
         .setTitle(`🎤 Statistiques Vocales - ${guild.name}`)
         .setThumbnail(guild.iconURL({ dynamic: true, size: 256 }))
         .setDescription(`Voici les statistiques vocales du serveur **${guild.name}** !`)

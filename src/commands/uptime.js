@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -25,7 +26,7 @@ module.exports = {
     const totalMembers = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
     
     const embed = new EmbedBuilder()
-      .setColor(0x00ff00)
+      .setColor(colors.success)
       .setTitle("⏱️ Uptime du Bot")
       .setDescription(`**Clarity Bot** est connecté depuis **${days}j ${hours}h ${minutes}m ${seconds}s** !`)
       .addFields(
@@ -73,8 +74,7 @@ module.exports = {
       .setTimestamp();
 
     await interaction.reply({
-      embeds: [embed],
-      components: [row]
+      embeds: [embed]
     });
   },
 };

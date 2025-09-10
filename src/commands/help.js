@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -25,14 +26,14 @@ module.exports = {
       
       const category = interaction.options.getString("categorie");
 
-    // Couleurs pour chaque catégorie
-    const colors = {
-      fun: 0xff6b6b,
-      info: 0x4ecdc4,
-      mod: 0xff4757,
-      create: 0x5f27cd,
-      util: 0x00d2d3,
-      default: 0x5865f2
+    // Couleurs pour chaque catégorie (utilise la nouvelle palette)
+    const categoryColors = {
+      fun: colors.categories.fun,
+      info: colors.categories.info,
+      mod: colors.categories.mod,
+      create: colors.categories.create,
+      util: colors.categories.util,
+      default: colors.primary
     };
 
     // Commandes par catégorie
@@ -170,29 +171,29 @@ module.exports = {
       return embed;
     }
 
-    // Créer les boutons
+    // Créer les boutons avec les nouvelles couleurs
     const row = new ActionRowBuilder()
       .addComponents(
         new ButtonBuilder()
           .setCustomId("help_fun")
           .setLabel("🎮 Fun")
-          .setStyle(1),
+          .setStyle(1), // Primary (bleu Discord)
         new ButtonBuilder()
           .setCustomId("help_info")
           .setLabel("👤 Info")
-          .setStyle(1),
+          .setStyle(1), // Primary
         new ButtonBuilder()
           .setCustomId("help_mod")
           .setLabel("🛡️ Mod")
-          .setStyle(1),
+          .setStyle(4), // Danger (rouge Discord)
         new ButtonBuilder()
           .setCustomId("help_create")
           .setLabel("🎨 Création")
-          .setStyle(1),
+          .setStyle(3), // Success (vert Discord)
         new ButtonBuilder()
           .setCustomId("help_util")
           .setLabel("🔧 Utils")
-          .setStyle(1)
+          .setStyle(2) // Secondary (gris Discord)
       );
 
     // Répondre selon la catégorie demandée
@@ -205,7 +206,7 @@ module.exports = {
         util: "Utilitaires"
       };
 
-      const embed = createCategoryEmbed(categoryNames[category], commands[category], colors[category]);
+      const embed = createCategoryEmbed(categoryNames[category], commands[category], categoryColors[category]);
       await interaction.editReply({ embeds: [embed] });
     } else {
       const embed = createMainEmbed();
@@ -235,7 +236,7 @@ module.exports = {
             util: "Utilitaires"
           };
 
-          const embed = createCategoryEmbed(categoryNames[buttonCategory], commands[buttonCategory], colors[buttonCategory]);
+          const embed = createCategoryEmbed(categoryNames[buttonCategory], commands[buttonCategory], categoryColors[buttonCategory]);
           await i.editReply({ embeds: [embed], components: [row] });
         } catch (error) {
           console.error("Erreur lors de la gestion du bouton help:", error);
@@ -259,17 +260,17 @@ module.exports = {
             new ButtonBuilder()
               .setCustomId("help_mod")
               .setLabel("🛡️ Mod")
-              .setStyle(1)
+              .setStyle(4)
               .setDisabled(true),
             new ButtonBuilder()
               .setCustomId("help_create")
               .setLabel("🎨 Création")
-              .setStyle(1)
+              .setStyle(3)
               .setDisabled(true),
             new ButtonBuilder()
               .setCustomId("help_util")
               .setLabel("🔧 Utils")
-              .setStyle(1)
+              .setStyle(2)
               .setDisabled(true)
           );
 

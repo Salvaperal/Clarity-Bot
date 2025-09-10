@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -130,7 +131,7 @@ module.exports = {
       }
       
       const embed = new EmbedBuilder()
-        .setColor(0xffa500)
+        .setColor(colors.warning)
         .setTitle("🔇 Mute réussi !")
         .setDescription(`**${user.username}** a été mute avec succès !`)
         .addFields(

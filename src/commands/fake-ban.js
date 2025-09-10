@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -39,7 +40,7 @@ module.exports = {
     }
 
     const embed = new EmbedBuilder()
-      .setColor(0xff0000)
+      .setColor(colors.error)
       .setTitle("🚫 Bannissement")
       .setDescription(`**${user}** a été banni du serveur !`)
       .addFields(

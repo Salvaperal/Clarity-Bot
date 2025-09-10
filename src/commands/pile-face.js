@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -9,14 +10,14 @@ module.exports = {
     const result = Math.random() < 0.5 ? "Pile" : "Face";
     const emoji = result === "Pile" ? "🪙" : "🪙";
     
-    let color = 0x5865f2;
+    let color = colors.primary;
     let description = "";
     
     if (result === "Pile") {
-      color = 0xffd700;
+      color = colors.warning;
       description = "**Pile !** La pièce est tombée sur le côté pile !";
     } else {
-      color = 0xc0c0c0;
+      color = colors.accent;
       description = "**Face !** La pièce est tombée sur le côté face !";
     }
 

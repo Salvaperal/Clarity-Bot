@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -27,7 +28,7 @@ module.exports = {
       }
 
       const embed = new EmbedBuilder()
-        .setColor(0x5865f2)
+        .setColor(colors.primary)
         .setTitle(`🖼️ Bannière de ${user.username}`)
         .setDescription(`Voici la bannière de **${user.username}** !`)
         .setImage(bannerURL)

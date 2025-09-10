@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -16,7 +17,7 @@ module.exports = {
     const humanMembers = memberCount - botMembers;
 
     const embed = new EmbedBuilder()
-      .setColor(0x00ff00)
+      .setColor(colors.success)
       .setTitle("👥 Statistiques des Membres")
       .setDescription(`**${guild.name}** compte actuellement **${memberCount}** membres !`)
       .addFields(

@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -19,7 +20,7 @@ module.exports = {
     try {
       // Envoyer un message de confirmation
       const embed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("💥 Nuke en cours...")
         .setDescription(`Le salon **${channel.name}** va être nuké !`)
         .addFields(
@@ -62,7 +63,7 @@ module.exports = {
           
           // Envoyer un message dans le nouveau salon
           const nukeEmbed = new EmbedBuilder()
-            .setColor(0xff0000)
+            .setColor(colors.error)
             .setTitle("💥 Salon Nuké !")
             .setDescription(`**Le salon a été nuké !**\n\n**Ancien salon :** ${channel.name}\n**Nouveau salon :** ${clonedChannel.name}`)
             .addFields(

@@ -4,6 +4,7 @@ const {
   ButtonBuilder,
   SlashCommandBuilder,
 } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -13,14 +14,14 @@ module.exports = {
   async execute(interaction, client) {
     const ping = Math.round(client.ws.ping);
     let status = "\`\`\`🟢 Excellent\`\`\`";
-    let color = 0x00ff00;
+    let color = colors.success;
     
     if (ping > 200) {
       status = "\`\`\`🔴 Mauvais\`\`\`";
-      color = 0xff0000;
+      color = colors.error;
     } else if (ping > 100) {
       status = "\`\`\`🟡 Correct\`\`\`";
-      color = 0xffff00;
+      color = colors.warning;
     }
 
     const pingembed = new EmbedBuilder()

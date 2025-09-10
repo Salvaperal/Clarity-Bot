@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -22,23 +23,23 @@ module.exports = {
     const progressBar = `${rainbow.repeat(hearts)}${block.repeat(10 - hearts)}`;
     
     let status = "";
-    let color = 0xff69b4;
+    let color = colors.primary;
     
     if (percentage >= 80) {
       status = "🏳️‍🌈 Très gay !";
-      color = 0xff69b4;
+      color = colors.success;
     } else if (percentage >= 60) {
       status = "🏳️‍🌈 Assez gay !";
-      color = 0xff1493;
+      color = colors.accent;
     } else if (percentage >= 40) {
       status = "🏳️‍🌈 Un peu gay !";
-      color = 0xffc0cb;
+      color = colors.primary;
     } else if (percentage >= 20) {
       status = "🏳️‍🌈 Pas très gay !";
-      color = 0xffff00;
+      color = colors.warning;
     } else {
       status = "🏳️‍🌈 Pas gay du tout !";
-      color = 0x00ff00;
+      color = colors.error;
     }
 
     const embed = new EmbedBuilder()

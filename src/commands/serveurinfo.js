@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -36,7 +37,7 @@ module.exports = {
     const mfaLevel = guild.mfaLevel;
     
     const embed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle(`🏰 Informations sur ${guild.name}`)
       .setThumbnail(guild.iconURL({ dynamic: true, size: 256 }))
       .setDescription(guild.description || "*Aucune description*")

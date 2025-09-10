@@ -1,5 +1,6 @@
 
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -38,23 +39,23 @@ module.exports = {
     const progressBar = `${heart.repeat(hearts)}${block.repeat(10 - hearts)}`;
     
     let status = "";
-    let color = 0xf47fff;
+    let color = colors.primary;
     
     if (percentage >= 90) {
       status = "💕 Amour parfait !";
-      color = 0xff69b4;
+      color = colors.success;
     } else if (percentage >= 70) {
       status = "💕 Très amoureux !";
-      color = 0xff1493;
+      color = colors.accent;
     } else if (percentage >= 50) {
       status = "💕 Assez amoureux !";
-      color = 0xf47fff;
+      color = colors.primary;
     } else if (percentage >= 30) {
       status = "💕 Un peu amoureux !";
-      color = 0xffc0cb;
+      color = colors.secondary;
     } else {
       status = "💔 Pas d'amour !";
-      color = 0xff0000;
+      color = colors.error;
     }
 
     const embed = new EmbedBuilder()

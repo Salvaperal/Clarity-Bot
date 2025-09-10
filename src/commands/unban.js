@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -60,7 +61,7 @@ module.exports = {
       await interaction.guild.members.unban(user.id, `${reason} (Unban par ${interaction.user.tag})`);
       
       const embed = new EmbedBuilder()
-        .setColor(0x00ff00)
+        .setColor(colors.success)
         .setTitle("🔓 Unban réussi !")
         .setDescription(`**${user.username}** a été débanni avec succès !`)
         .addFields(

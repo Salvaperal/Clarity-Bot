@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ButtonBuilder, ModalBuilder, TextInputBuilder, PermissionFlagsBits, ChannelType } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -18,7 +19,7 @@ module.exports = {
 
     // Embed de construction
     const constructionEmbed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle("🎨 Créateur d'Embed Clarity")
       .setDescription("**Bienvenue dans le créateur d'embed interactif !**\n\n**Instructions :**\n• Sélectionnez une option dans le menu déroulant\n• Suivez les instructions pour personnaliser votre embed\n• Cliquez sur **Envoyer** quand vous êtes satisfait\n\n**Commandes spéciales :**\n• Tapez `remove` pour supprimer un élément\n• Tapez `cancel` pour annuler une modification")
       .addFields(
@@ -42,7 +43,7 @@ module.exports = {
 
     // Embed de test (vide au début)
     let testEmbed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setDescription("**Votre embed apparaîtra ici !**\nUtilisez le menu ci-dessous pour le personnaliser.")
       .setFooter({ text: "Aperçu en temps réel" });
 
@@ -108,23 +109,23 @@ module.exports = {
           .setValue("reset")
       );
 
-    // Boutons
+    // Boutons avec les nouvelles couleurs
     const sendButton = new ButtonBuilder()
       .setCustomId("send_embed")
       .setLabel("📤 Envoyer l'embed")
-      .setStyle(2) // Success
+      .setStyle(3) // Success (vert Discord)
       .setEmoji("📤");
 
     const previewButton = new ButtonBuilder()
       .setCustomId("preview_embed")
       .setLabel("👁️ Aperçu")
-      .setStyle(1) // Primary
+      .setStyle(1) // Primary (bleu Discord)
       .setEmoji("👁️");
 
     const clearButton = new ButtonBuilder()
       .setCustomId("clear_embed")
       .setLabel("🗑️ Effacer")
-      .setStyle(4) // Danger
+      .setStyle(4) // Danger (rouge Discord)
       .setEmoji("🗑️");
 
     const rows = [
@@ -147,7 +148,7 @@ module.exports = {
       footer: { text: null, iconURL: null },
       thumbnail: null,
       image: null,
-      color: 0x5865f2,
+      color: colors.primary,
       timestamp: false,
       fields: []
     };
@@ -183,7 +184,7 @@ module.exports = {
     // Fonction pour obtenir une couleur
     function getColor(color) {
       if (color === "random") return Math.floor(Math.random() * 16777215);
-      if (color === "rainbow") return 0x5865f2; // Couleur par défaut pour rainbow
+      if (color === "rainbow") return colors.primary; // Couleur par défaut pour rainbow
       return parseInt(color.replace("#", ""), 16);
     }
 
@@ -366,7 +367,7 @@ module.exports = {
                     .setLabel("Couleur (hex: #FFFFFF, random, rainbow)")
                     .setStyle(1)
                     .setPlaceholder("#FFFFFF, random, rainbow")
-                    .setValue(embedData.color ? `#${embedData.color.toString(16).padStart(6, '0')}` : "#5865f2")
+                    .setValue(embedData.color ? `#${embedData.color.toString(16).padStart(6, '0')}` : `#${colors.primary.toString(16).padStart(6, '0')}`)
                     .setRequired(false)
                     .setMaxLength(20)
                 )
@@ -449,7 +450,7 @@ module.exports = {
               footer: { text: null, iconURL: null },
               thumbnail: null,
               image: null,
-              color: 0x5865f2,
+              color: colors.primary,
               timestamp: false,
               fields: []
             };
@@ -495,7 +496,7 @@ module.exports = {
               footer: { text: null, iconURL: null },
               thumbnail: null,
               image: null,
-              color: 0x5865f2,
+              color: colors.primary,
               timestamp: false,
               fields: []
             };
@@ -632,7 +633,7 @@ module.exports = {
     // Timeout
     collector.on("end", () => {
       const timeoutEmbed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("⏰ Session expirée")
         .setDescription("Le créateur d'embed a expiré. Utilisez `/embed` pour en créer un nouveau.")
         .setTimestamp();

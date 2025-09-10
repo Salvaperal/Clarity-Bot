@@ -1,5 +1,6 @@
 
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -42,7 +43,7 @@ module.exports = {
     const answer = replies[res];
     
     const embed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle("🔮 Boule Magique")
       .setDescription(`**Question :** ${question}`)
       .addFields(

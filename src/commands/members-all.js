@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -29,7 +30,7 @@ module.exports = {
     }
 
     const embed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle("🌍 Statistiques Globales")
       .setDescription(`**Clarity Bot** surveille actuellement **${totalMembers}** membres sur **${totalGuilds}** serveurs !`)
       .addFields(

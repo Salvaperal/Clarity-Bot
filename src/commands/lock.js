@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -34,7 +35,7 @@ module.exports = {
       }, { reason: `${reason} (Lock par ${interaction.user.tag})` });
       
       const embed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("🔒 Salon verrouillé !")
         .setDescription(`Le salon **${channel.name}** a été verrouillé avec succès !`)
         .addFields(

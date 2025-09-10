@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -19,7 +20,7 @@ module.exports = {
     try {
       // Envoyer un message de confirmation avant la suppression
       const embed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("🗑️ Salon supprimé !")
         .setDescription(`Le salon **${channel.name}** a été supprimé !`)
         .addFields(

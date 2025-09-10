@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -61,7 +62,7 @@ module.exports = {
 
       // Créer l'embed de confirmation
       const embed = new EmbedBuilder()
-        .setColor(0x00ff00)
+        .setColor(colors.success)
         .setTitle("🗑️ Messages supprimés !")
         .setDescription(`**${messagesToDelete.size}** message(s) ont été supprimés avec succès !`)
         .addFields(
@@ -96,7 +97,7 @@ module.exports = {
       console.error("Erreur lors de la suppression des messages :", error);
       
       const errorEmbed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("❌ Erreur !")
         .setDescription("Une erreur s'est produite lors de la suppression des messages.")
         .addFields(

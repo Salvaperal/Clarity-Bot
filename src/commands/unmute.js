@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -69,7 +70,7 @@ module.exports = {
       }
       
       const embed = new EmbedBuilder()
-        .setColor(0x00ff00)
+        .setColor(colors.success)
         .setTitle("🔊 Unmute réussi !")
         .setDescription(`**${user.username}** a été unmute avec succès !`)
         .addFields(

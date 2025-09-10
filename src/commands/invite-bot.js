@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -22,7 +23,7 @@ module.exports = {
     }
 
     const embed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle("🤖 Liens d'invitation du bot")
       .setDescription(`Voici les liens d'invitation pour **${bot.username}** !`)
       .addFields(

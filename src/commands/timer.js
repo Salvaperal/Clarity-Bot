@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -70,7 +71,7 @@ module.exports = {
     if (seconds % 60 > 0) readableDuration += `${seconds % 60}s`;
     
     const embed = new EmbedBuilder()
-      .setColor(0x00ff00)
+      .setColor(colors.success)
       .setTitle("⏰ Minuteur démarré !")
       .setDescription(`Minuteur configuré pour **${readableDuration.trim()}**`)
       .addFields(
@@ -103,7 +104,7 @@ module.exports = {
     // Programmer la notification
     setTimeout(async () => {
       const endEmbed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("⏰ Minuteur terminé !")
         .setDescription(`**${interaction.user}**, votre minuteur de **${readableDuration.trim()}** est terminé !`)
         .addFields(

@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -48,7 +49,7 @@ module.exports = {
       }, { reason: `${reason} (Leck par ${interaction.user.tag})` });
       
       const embed = new EmbedBuilder()
-        .setColor(0xff0000)
+        .setColor(colors.error)
         .setTitle("👁️ Salon caché !")
         .setDescription(`Le salon **${channel.name}** a été caché avec succès !`)
         .addFields(

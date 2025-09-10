@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -22,23 +23,23 @@ module.exports = {
     const progressBar = `${capybara.repeat(hearts)}${block.repeat(10 - hearts)}`;
     
     let status = "";
-    let color = 0x00ff00;
+    let color = colors.success;
     
     if (percentage >= 80) {
       status = "🦫 Capybara suprême !";
-      color = 0x00ff00;
+      color = colors.success;
     } else if (percentage >= 60) {
       status = "🦫 Très capybara !";
-      color = 0x90ee90;
+      color = colors.accent;
     } else if (percentage >= 40) {
       status = "🦫 Assez capybara !";
-      color = 0xffff00;
+      color = colors.primary;
     } else if (percentage >= 20) {
       status = "🦫 Peu capybara !";
-      color = 0xffa500;
+      color = colors.warning;
     } else {
       status = "🦫 Pas du tout capybara !";
-      color = 0xff0000;
+      color = colors.error;
     }
 
     const embed = new EmbedBuilder()

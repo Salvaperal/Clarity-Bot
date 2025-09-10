@@ -65,7 +65,7 @@ module.exports = {
     }
 
     const embed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle(`${emoji} ${jeuChoisi}`)
       .setDescription(description)
       .addFields(

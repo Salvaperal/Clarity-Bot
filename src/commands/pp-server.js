@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -21,7 +22,7 @@ module.exports = {
     const iconJPG = guild.iconURL({ format: 'jpg', dynamic: true, size: 1024 });
 
     const embed = new EmbedBuilder()
-      .setColor(0x5865f2)
+      .setColor(colors.primary)
       .setTitle(`🏰 Icône de ${guild.name}`)
       .setDescription(`Voici l'icône du serveur **${guild.name}** !`)
       .setImage(iconURL)

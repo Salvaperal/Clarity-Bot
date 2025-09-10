@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { colors } = require("../config/colors");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -67,7 +68,7 @@ module.exports = {
       });
 
       const embed = new EmbedBuilder()
-        .setColor(0x5865f2)
+        .setColor(colors.primary)
         .setTitle(`👤 Informations sur ${user.username}`)
         .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 256 }))
         .setDescription(`Voici les informations détaillées de **${user.username}** !`)
